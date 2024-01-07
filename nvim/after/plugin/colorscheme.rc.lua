@@ -35,4 +35,4 @@ everforest.setup({
   float_style = "bright",
 })
 
-vim.cmd([[colorscheme everforest]])
+vim.cmd([[colorscheme onenord]])

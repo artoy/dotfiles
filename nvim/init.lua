@@ -99,5 +99,7 @@ require("lazy").setup({
  -- terminal Integration
   { 'akinsho/toggleterm.nvim'},
 
+ -- onenord
+  { 'rmehri01/onenord.nvim' }
 })
 

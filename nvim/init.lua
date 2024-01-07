@@ -100,6 +100,11 @@ require("lazy").setup({
   { 'akinsho/toggleterm.nvim'},
 
  -- onenord
-  { 'rmehri01/onenord.nvim' }
+  { 'rmehri01/onenord.nvim' },
+
+ -- skkeleton
+  { 'vim-denops/denops.vim' },
+  { 'vim-skk/skkeleton' },
+  { 'delphinus/skkeleton_indicator.nvim' }
 })
 

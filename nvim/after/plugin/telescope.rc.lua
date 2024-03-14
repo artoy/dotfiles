@@ -112,3 +112,4 @@ vim.keymap.set("n", "<leader>gl", "<Cmd>lua require('telescope').extensions.frec
 --   ":Telescope file_browser path=%:p:h select_buffer=true previewer=false<CR>",
 --   { noremap = true }
 -- )
+

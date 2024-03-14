@@ -23,13 +23,11 @@ require("lazy").setup({
 
   {'nvim-tree/nvim-web-devicons',lazy = false,priority = 1000},
 
-  -- {'AlexvZyl/nordic.nvim'},
+ -- onedarkpro
   {
-    "neanias/everforest-nvim",
-    version = false,
-    lazy = false,
-    priority = 1000, -- make sure to load this before all the other start plugins
-  }, 
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+  },
 
  -- coc.nvim
   {'neoclide/coc.nvim', branch = 'release'},
@@ -44,7 +42,7 @@ require("lazy").setup({
 
   {'lambdalisue/fern.vim',lazy = false, priority = 1000 }, --遅延読み込みをオフにして優先度を上げないとnvim-web-deviconsが読み込めない
   {'lambdalisue/glyph-palette.vim'},
-  {'TheLeoP/fern-renderer-web-devicons.nvim',dependencies = {'nvim-web-devicons'}}, 
+  {'TheLeoP/fern-renderer-web-devicons.nvim',dependencies = {'nvim-web-devicons'}},
 
 
  --Syntax Highlight
@@ -69,7 +67,6 @@ require("lazy").setup({
   -- {'petertriho/nvim-scrollbar'}, -- オンにすると巨大なファイルでかなり重くなる
   {'kevinhwang91/nvim-hlslens'},
   {'haya14busa/vim-asterisk'},
-  
   {'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
   {'numToStr/Comment.nvim' },
   {'norcalli/nvim-colorizer.lua' },
@@ -93,18 +90,33 @@ require("lazy").setup({
  -- Git Integration
   {'tpope/vim-fugitive'},
   {'lewis6991/gitsigns.nvim'},
- 
   {'github/copilot.vim'},
 
  -- terminal Integration
   { 'akinsho/toggleterm.nvim'},
 
- -- onenord
-  { 'rmehri01/onenord.nvim' },
-
  -- skkeleton
   { 'vim-denops/denops.vim' },
   { 'vim-skk/skkeleton' },
-  { 'delphinus/skkeleton_indicator.nvim' }
+  { 'delphinus/skkeleton_indicator.nvim' },
+
+ -- vimtex
+  -- {'lervag/vimtex'},
+
+ -- rainbow parentheses
+  {'HiPhish/nvim-ts-rainbow2'},
+
+ -- vim-skim-synctex
+  {'ryota2357/vim-skim-synctex'},
 })
 
+-- rainbow parentheses
+require('nvim-treesitter.configs').setup {
+  rainbow = {
+    -- enable = true,
+    -- Which query to use for finding delimiters
+    query = 'rainbow-parens',
+    -- Highlight the entire buffer all at once
+    strategy = require('ts-rainbow').strategy.global,
+  }
+}

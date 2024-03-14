@@ -101,3 +101,10 @@ keymap.set('n', '<Leader>a', 'gg0vG$')
 
 -- terminalモードから抜けるためのショートカット
 keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
+-- otexをtexファイル扱いにする
+vim.filetype.add({
+  extension = {
+    otex = "tex",
+  },
+})

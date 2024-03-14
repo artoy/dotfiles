@@ -35,5 +35,9 @@
     "indent_style": "space",
     "indent_size": "2"
   },
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd"
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd",
+  "coc.source.vimtex.filetypes": [
+    "tex",
+    "plaintex"
+  ]
 }

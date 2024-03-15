@@ -120,6 +120,9 @@ require("lazy").setup({
     config = function()
       require('bookmarks').setup()
     end
-  }
+  },
+
+  -- vim-edgemotion
+   {'haya14busa/vim-edgemotion'},
 })
 

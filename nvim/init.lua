@@ -108,15 +108,18 @@ require("lazy").setup({
 
  -- vim-skim-synctex
   {'ryota2357/vim-skim-synctex'},
+
+ -- vim-syntax-tyranoscript
+  {"bellflower2015/vim-syntax-tyranoscript"},
+
+ -- Bookmarks
+  {
+    'tomasky/bookmarks.nvim',
+    -- after = "telescope.nvim",
+    event = "VimEnter",
+    config = function()
+      require('bookmarks').setup()
+    end
+  }
 })
 
--- rainbow parentheses
-require('nvim-treesitter.configs').setup {
-  rainbow = {
-    -- enable = true,
-    -- Which query to use for finding delimiters
-    query = 'rainbow-parens',
-    -- Highlight the entire buffer all at once
-    strategy = require('ts-rainbow').strategy.global,
-  }
-}

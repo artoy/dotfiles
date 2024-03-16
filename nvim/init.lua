@@ -124,5 +124,8 @@ require("lazy").setup({
 
   -- vim-edgemotion
    {'haya14busa/vim-edgemotion'},
+
+  -- todo-comments
+   {'folke/todo-comments.nvim'},
 })
 

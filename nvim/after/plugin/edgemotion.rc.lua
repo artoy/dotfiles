@@ -1,4 +1,4 @@
 local keymap = vim.keymap
 
-keymap.set('n', '<C-j>', '<Plug>(edgemotion-j)')
-keymap.set('n', '<C-k>', '<Plug>(edgemotion-k)')
+keymap.set('n', '<Leader><C-j>', '<Plug>(edgemotion-j)')
+keymap.set('n', '<Leader><C-k>', '<Plug>(edgemotion-k)')

@@ -74,5 +74,5 @@ vim.keymap.set("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
-vim.keymap.set("n", "<leader>tt", "<cmd> TodoTelescope keywords=TODO,FIX,HACK,WARN,PERF,NOTE,TEST<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>mt", "<cmd> TodoTelescope keywords=TODO,FIX,HACK,WARN,PERF,NOTE,TEST<CR>", { noremap = true, silent = true })
 

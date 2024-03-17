@@ -127,5 +127,10 @@ require("lazy").setup({
 
   -- todo-comments
    {'folke/todo-comments.nvim'},
+
+  -- spelunker
+   {"kamykn/spelunker.vim"},
+   -- TODO: リストを表示したときカーソルがどこにあるかわからないので色を変えたい
+   {"kamykn/popup-menu.nvim"},
 })
 

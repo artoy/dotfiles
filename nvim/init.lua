@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
+--
 -- basic setting
 require('base')
 
@@ -128,9 +128,9 @@ require("lazy").setup({
   -- todo-comments
    {'folke/todo-comments.nvim'},
 
-  -- spelunker
-   {"kamykn/spelunker.vim"},
-   -- TODO: リストを表示したときカーソルがどこにあるかわからないので色を変えたい
-   {"kamykn/popup-menu.nvim"},
+  -- -- spelunker
+  --  {"kamykn/spelunker.vim"},
+  --  -- TODO: リストを表示したときカーソルがどこにあるかわからないので色を変えたい
+  --  {"kamykn/popup-menu.nvim"},
 })
 

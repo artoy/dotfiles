@@ -49,7 +49,7 @@ telescope.load_extension("frecency") --frecency search
 -- telescope.load_extension("file_browser")
 
 -- file search
-vim.keymap.set('n', '<leader>f',
+vim.keymap.set('n', '<leader>fi',
   function()
     builtin.find_files({
       no_ignore = false,

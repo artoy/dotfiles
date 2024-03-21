@@ -4,7 +4,7 @@ local status,term = pcall(require,"toggleterm")
 if (not status) then return end
 
 term.setup{
-  direction =  'float',
+  direction =  'vertical',
   float_opts = {
     -- The border key is *almost* the same as 'nvim_open_win'
     -- see :h nvim_open_win for details on borders however
@@ -13,7 +13,8 @@ term.setup{
     border = 'single',
     -- like `size`, width and height can be a number or function which is passed the current terminal
     winblend = 0, -- ターミナルが透明のときは0にしないと正常に表示されない
-  }
+  },
+  size = 80
 }
 
 vim.keymap.set('n','<leader>t',':ToggleTerm<CR>',{silent = true,noremap = true})

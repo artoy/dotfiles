@@ -29,11 +29,6 @@ require("lazy").setup({
     priority = 1000, -- Ensure it loads first
   },
 
- -- -- coc.nvim
- --  {'neoclide/coc.nvim', branch = 'release'},
- -- -- coc-snippet用
- --  {'mlaursen/vim-react-snippets'},
-
  -- Statusline
   {'nvim-lualine/lualine.nvim'},
 
@@ -62,9 +57,7 @@ require("lazy").setup({
  -- Coding Support
   {'windwp/nvim-autopairs'},
   {'windwp/nvim-ts-autotag'},
- --  'haringsrob/nvim_context_vt'
 
-  -- {'petertriho/nvim-scrollbar'}, -- オンにすると巨大なファイルでかなり重くなる
   {'kevinhwang91/nvim-hlslens'},
   {'haya14busa/vim-asterisk'},
   {'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
@@ -128,18 +121,10 @@ require("lazy").setup({
   -- todo-comments
    {'folke/todo-comments.nvim'},
 
-  -- -- spelunker
-  --  {"kamykn/spelunker.vim"},
-  --  -- TODO: リストを表示したときカーソルがどこにあるかわからないので色を変えたい
-  --  {"kamykn/popup-menu.nvim"},
-
   -- lsp
   {'neovim/nvim-lspconfig'},
 
   -- mini.completion
   {'echasnovski/mini.completion'},
-
-  -- mason
-  -- {"williamboman/mason.nvim"}
 })
 

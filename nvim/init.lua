@@ -29,10 +29,10 @@ require("lazy").setup({
     priority = 1000, -- Ensure it loads first
   },
 
- -- coc.nvim
-  {'neoclide/coc.nvim', branch = 'release'},
- -- coc-snipet用
-  {'mlaursen/vim-react-snippets'},
+ -- -- coc.nvim
+ --  {'neoclide/coc.nvim', branch = 'release'},
+ -- -- coc-snippet用
+ --  {'mlaursen/vim-react-snippets'},
 
  -- Statusline
   {'nvim-lualine/lualine.nvim'},
@@ -54,7 +54,7 @@ require("lazy").setup({
 
  -- Telescope
   {'nvim-telescope/telescope.nvim' },
-  {'fannheyward/telescope-coc.nvim'},
+  -- {'fannheyward/telescope-coc.nvim'},
   {
    "nvim-telescope/telescope-frecency.nvim",
   },
@@ -132,5 +132,14 @@ require("lazy").setup({
   --  {"kamykn/spelunker.vim"},
   --  -- TODO: リストを表示したときカーソルがどこにあるかわからないので色を変えたい
   --  {"kamykn/popup-menu.nvim"},
+
+  -- lsp
+  {'neovim/nvim-lspconfig'},
+
+  -- mini.completion
+  {'echasnovski/mini.completion'},
+
+  -- mason
+  -- {"williamboman/mason.nvim"}
 })
 

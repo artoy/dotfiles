@@ -31,7 +31,7 @@ require("lazy").setup({
 
  -- -- coc.nvim
  --  {'neoclide/coc.nvim', branch = 'release'},
- -- -- coc-snipet用
+ -- -- coc-snippet用
  --  {'mlaursen/vim-react-snippets'},
 
  -- Statusline
@@ -135,10 +135,11 @@ require("lazy").setup({
 
   -- lsp
   {'neovim/nvim-lspconfig'},
-  {"williamboman/mason.nvim"},
-  {"williamboman/mason-lspconfig.nvim"},
-})
 
--- lsp
-require'lspconfig'.ocamllsp.setup{}
+  -- mini.completion
+  {'echasnovski/mini.completion'},
+
+  -- mason
+  -- {"williamboman/mason.nvim"}
+})
 

@@ -82,8 +82,8 @@ keymap.set('i', '<C-f>', '<Right>')
 keymap.set('i','jj','<Esc>')
 
 -- 保存と終了のショートカット
-keymap.set('n','<Leader>w',':w<CR>')
-keymap.set('n','<Leader>q',':q<CR>')
+-- keymap.set('n','<Leader>w',':w<CR>')
+-- keymap.set('n','<Leader>q',':q<CR>')
 
 -- 設定ファイルを開く
 keymap.set('n','<F1>',':edit $MYVIMRC<CR>')

@@ -126,5 +126,13 @@ require("lazy").setup({
 
   -- mini.completion
   {'echasnovski/mini.completion'},
+
+  -- telescope-media-files
+  {'nvim-lua/popup.nvim'},
+  {'nvim-lua/plenary.nvim'},
+  {'nvim-telescope/telescope-media-files.nvim'},
+
+  -- git-conflict
+  {'akinsho/git-conflict.nvim', version = "*", config = true}
 })
 

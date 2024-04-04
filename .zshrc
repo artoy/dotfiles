@@ -45,7 +45,7 @@ alias rmtex='sh ~/shell_script/rm_tex.sh'
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # ruby
-# export PATH="/Users/artoy/rbenv:$PATH"
+export PATH="/Users/artoy/rbenv:$PATH"
 # eval "$(rbenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -101,7 +101,6 @@ alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^
 
 # dockerコンテナに入る。deで実行できる
 alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
- 
 
 PATH=~/.console-ninja/.bin:$PATH
 

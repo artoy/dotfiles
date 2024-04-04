@@ -45,8 +45,8 @@ alias rmtex='sh ~/shell_script/rm_tex.sh'
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # ruby
-export PATH="/Users/artoy/rbenv:$PATH"
-eval "$(rbenv init -)"
+# export PATH="/Users/artoy/rbenv:$PATH"
+# eval "$(rbenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/artoy/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/artoy/google-cloud-sdk/path.zsh.inc'; fi

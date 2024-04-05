@@ -20,7 +20,7 @@ export PATH="/Users/artoy/.local/bin:$PATH"
 # [ -f "/Users/artoy/.ghcup/env" ] && source "/Users/artoy/.ghcup/env" # ghcup-env
 
 # Go
-export GOPATH=/Users/artoy/go
+export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
 # starship

@@ -107,6 +107,7 @@ PATH=~/.console-ninja/.bin:$PATH
 # neovim用のlspサーバ
 PATH=$HOME/lsp:$PATH
 
-# direnv 
+# direnv
 export EDITOR=vim
 eval "$(direnv hook zsh)"
+eval "$(mise activate zsh)"

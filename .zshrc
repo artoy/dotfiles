@@ -111,3 +111,7 @@ PATH=$HOME/lsp:$PATH
 export EDITOR=vim
 eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
+
+# shortcut
+alias gb="git branch"
+alias gc="git checkout"

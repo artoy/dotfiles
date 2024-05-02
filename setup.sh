@@ -17,4 +17,7 @@ ln -s $SCRIPT_DIR/.zshrc ~/.zshrc
 rm ~/.config/starship.toml
 ln -s $SCRIPT_DIR/starship.toml ~/.config/starship.toml
 
+rm ~/.ideavimrc
+ln -s $SCRIPT_DIR/.ideavimrc ~/.ideavimrc
+
 source ~/.zshrc

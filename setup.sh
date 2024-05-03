@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/home/linuxbrew/.linuxbrew/bin/zsh
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 

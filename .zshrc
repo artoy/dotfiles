@@ -1,3 +1,4 @@
+export PATH="/home/artoy/.local/bin:$PATH"
 
 # opam configuration
 [[ ! -r /Users/artoy/.opam/opam-init/init.zsh ]] || source /Users/artoy/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
@@ -61,7 +62,7 @@ export PATH=$HOME/istio-1.15.1/bin:$PATH
 export PATH=$HOME/git/horsat2:$PATH
 
 # z command
-. ~/z/z.sh
+# . ~/z/z.sh
 
 # peco settings
 # 過去に実行したコマンドを選択。ctrl-rにバインド
@@ -110,7 +111,6 @@ PATH=$HOME/lsp:$PATH
 # direnv
 export EDITOR=vim
 eval "$(direnv hook zsh)"
-eval "$(mise activate zsh)"
 
 # shortcut
 alias gb="git branch"

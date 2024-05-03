@@ -1,6 +1,6 @@
 
 # opam configuration
-[[ ! -r /Users/artoy/.opam/opam-init/init.zsh ]] || source /Users/artoy/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # clang to gcc
 # export PATH="/opt/homebrew/bin:$PATH"
@@ -10,14 +10,14 @@ export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 
 # sbt
-export PATH="/Users/artoy/sbt/bin:$PATH"
+export PATH="$HOME/sbt/bin:$PATH"
 
 # Haskell
-export PATH="/Users/artoy/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # LLVM
 # export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-# [ -f "/Users/artoy/.ghcup/env" ] && source "/Users/artoy/.ghcup/env" # ghcup-env
+# [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # Go
 export GOPATH=$HOME/go
@@ -45,14 +45,14 @@ alias rmtex='sh ~/shell_script/rm_tex.sh'
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # ruby
-export PATH="/Users/artoy/rbenv:$PATH"
+export PATH="$HOME/rbenv:$PATH"
 # eval "$(rbenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/artoy/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/artoy/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/artoy/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/artoy/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # istio
 export PATH=$HOME/istio-1.15.1/bin:$PATH
@@ -61,7 +61,7 @@ export PATH=$HOME/istio-1.15.1/bin:$PATH
 export PATH=$HOME/git/horsat2:$PATH
 
 # z command
-. ~/z/z.sh
+# . ~/z/z.sh
 
 # peco settings
 # 過去に実行したコマンドを選択。ctrl-rにバインド
@@ -110,7 +110,6 @@ PATH=$HOME/lsp:$PATH
 # direnv
 export EDITOR=vim
 eval "$(direnv hook zsh)"
-eval "$(mise activate zsh)"
 
 # shortcut
 alias gb="git branch"

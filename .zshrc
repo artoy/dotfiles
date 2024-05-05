@@ -113,3 +113,6 @@ eval "$(direnv hook zsh)"
 # shortcut
 alias gb="git branch"
 alias gc="git checkout"
+
+# gpg
+export GPG_TTY=$(tty)

@@ -1,3 +1,5 @@
+export PATH="$PATH:snap/bin"
+
 export PATH="/home/artoy/.local/bin:$PATH"
 
 # opam configuration
@@ -115,3 +117,6 @@ eval "$(direnv hook zsh)"
 # shortcut
 alias gb="git branch"
 alias gc="git checkout"
+
+# homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

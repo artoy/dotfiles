@@ -116,3 +116,4 @@ alias gc="git checkout"
 
 # gpg
 export GPG_TTY=$(tty)
+

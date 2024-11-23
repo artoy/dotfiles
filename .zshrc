@@ -22,6 +22,10 @@ export PATH="$HOME/.local/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
+# kubernetes
+alias k=kubectl
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
 # starship
 eval "$(starship init zsh)"
 
@@ -101,6 +105,9 @@ alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^
 # dockerコンテナに入る。deで実行できる
 alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
 
+# peco for kubernetes
+alias -g lc='`kubectx | peco --prompt "CONTEXT>"`'
+
 PATH=~/.console-ninja/.bin:$PATH
 
 # neovim用のlspサーバ
@@ -116,4 +123,3 @@ alias gc="git checkout"
 
 # gpg
 export GPG_TTY=$(tty)
-

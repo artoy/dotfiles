@@ -24,6 +24,8 @@ export PATH="$GOPATH/bin:$PATH"
 
 # kubernetes
 alias k=kubectl
+autoload -Uz compinit
+compinit
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # starship

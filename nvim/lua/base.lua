@@ -38,5 +38,16 @@ keymap.set('n', '<Leader>k', '8k')
 keymap.set('v', '<Leader>k', '8k')
 keymap.set('n', '<Leader>a', 'gg0vG$')
 
+-- move physical row instead of logical one
+keymap.set('n','j','gj')
+keymap.set('n','k','gk')
+
 -- for escaping from terminal
 keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
+-- tab settings
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.smarttab = true
+vim.opt.smartindent = true
+vim.opt.breakindent = true

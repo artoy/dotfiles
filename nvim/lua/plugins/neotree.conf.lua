@@ -1,15 +1,17 @@
-local keymap = vim.keymap
-
-keymap.set('n', 'nt', ':Neotree<Return>')
-
-return {
+local N = {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }
 }
 
+function N.config()
+    local keymap = vim.keymap
+    keymap.set('n', 'nt', ':Neotree<Return>')
+end
+
+return N

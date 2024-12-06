@@ -4,7 +4,7 @@ vim.g.mapleader = ' '
 local keymap = vim.keymap
 
 -- tab
-keymap.set("n", "te", ":tabedit")
+keymap.set("n", "te", ":tabedit<Return>")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
@@ -37,3 +37,6 @@ keymap.set('v', '<Leader>j', '8j')
 keymap.set('n', '<Leader>k', '8k')
 keymap.set('v', '<Leader>k', '8k')
 keymap.set('n', '<Leader>a', 'gg0vG$')
+
+-- for escaping from terminal
+keymap.set('t', '<Esc>', '<C-\\><C-n>')

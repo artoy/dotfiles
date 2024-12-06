@@ -45,9 +45,14 @@ keymap.set('n','k','gk')
 -- for escaping from terminal
 keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
--- tab settings
+-- indent settings
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 vim.opt.smartindent = true
 vim.opt.breakindent = true
+vim.opt.expandtab = true
+
+-- another settings
+vim.opt.number = true
+vim.opt.hls = true

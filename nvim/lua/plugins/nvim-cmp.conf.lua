@@ -1,23 +1,16 @@
-require("config.lazy")
-require("base")
+local C = {
+	'neovim/nvim-lspconfig',
+	'hrsh7th/cmp-nvim-lsp',
+	'hrsh7th/cmp-buffer',
+	'hrsh7th/cmp-path',
+	'hrsh7th/cmp-cmdline',
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-vsnip',
+	'hrsh7th/vim-vsnip',
+	"hrsh7th/nvim-cmp",
+}
 
--- postprocess
-require('lualine').setup()
-vim.cmd([[colorscheme catppuccin]])
-
-require("lspconfig").gopls.setup({
-	settings = {
-		gopls = {
-			completeUnimported = true,
-			usePlaceholders = true,
-			analyses = {
-				unusedparams = true
-			}
-		}
-	}	
-})
-
-
+function C.config()
 	-- Set up nvim-cmp.
   local cmp = require'cmp'
 
@@ -87,6 +80,9 @@ require("lspconfig").gopls.setup({
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-  --   capabilities = capabilities
-  -- }
+  require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
+    capabilities = capabilities
+  }
+end
+
+return C

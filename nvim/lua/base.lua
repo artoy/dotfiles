@@ -53,6 +53,12 @@ vim.opt.smartindent = true
 vim.opt.breakindent = true
 vim.opt.expandtab = true
 
+-- parentheses settings 
+keymap.set('i','(','()<Left>')
+keymap.set('i','{','{}<Left>')
+keymap.set('i','[','[]<Left>')
+
 -- another settings
 vim.opt.number = true
 vim.opt.hls = true
+

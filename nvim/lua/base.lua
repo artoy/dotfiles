@@ -57,6 +57,8 @@ vim.opt.expandtab = true
 keymap.set('i','(','()<Left>')
 keymap.set('i','{','{}<Left>')
 keymap.set('i','[','[]<Left>')
+keymap.set('i','"','""<Left>')
+keymap.set('i',"'","''<Left>")
 
 -- another settings
 vim.opt.number = true

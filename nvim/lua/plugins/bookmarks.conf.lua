@@ -22,7 +22,7 @@ function B.config()
         map("n","mc",bm.bookmark_clean) -- clean all marks in local buffer
         map("n","mn",bm.bookmark_next) -- jump to next mark in local buffer
         map("n","mp",bm.bookmark_prev) -- jump to previous mark in local buffer
-        map("n","ml",bm.bookmark_list) -- show marked file list in quickfix window
+        -- map("n","ml",bm.bookmark_list) -- show marked file list in quickfix window
         map("n","mx",bm.bookmark_clear_all) -- removes all bookmarks
       end
     }

@@ -15,13 +15,12 @@ function T.config()
 
     -- for telescope-memo
     require'telescope'.load_extension'memo'
-    vim.g.memoist_path = "~/.memolist/memo"
-    vim.g.memolist_memo_suffix = "md"
-    vim.g.memolist_fzf = 1
-    vim.g.memolist_template_dir_path = "~/.memolist/memotemplates"
-
     vim.keymap.set("n", "<leader>ml", ":Telescope memo list<CR>")
     vim.keymap.set("n", "<leader>mg", ":Telescope memo live_grep<CR>")
+
+    -- for bookmarks
+    require('telescope').load_extension('bookmarks')
+    vim.keymap.set("n", "ml", ":Telescope bookmarks list<CR>")
 end
 
 return T

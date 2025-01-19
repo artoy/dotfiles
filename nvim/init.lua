@@ -5,19 +5,6 @@ require("base")
 require('lualine').setup()
 vim.cmd([[colorscheme catppuccin]])
 
-require("lspconfig").gopls.setup({
-	settings = {
-		gopls = {
-			completeUnimported = true,
-			usePlaceholders = true,
-			analyses = {
-				unusedparams = true
-			}
-		}
-	}	
-})
-
-
 -- Set up nvim-cmp.
 local cmp = require'cmp'
 
@@ -63,7 +50,7 @@ sources = cmp.config.sources({
   { name = 'buffer' },
 })
 })
-require("cmp_git").setup() ]]-- 
+require("cmp_git").setup() ]]--
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline({ '/', '?' }, {
@@ -90,3 +77,16 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
 --   capabilities = capabilities
 -- }
+require'lspconfig'.ts_ls.setup{}
+
+require("lspconfig").gopls.setup({
+	settings = {
+		gopls = {
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true
+			}
+		}
+	}
+})

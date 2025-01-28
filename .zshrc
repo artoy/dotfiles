@@ -27,6 +27,8 @@ export PATH="$GOPATH/bin:$PATH"
 
 # kubernetes
 alias k=kubectl
+autoload -Uz compinit
+compinit
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # starship
@@ -126,3 +128,8 @@ alias gc="git checkout"
 
 # gpg
 export GPG_TTY=$(tty)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+

@@ -39,7 +39,6 @@ keymap.set('n', '<Leader>j', '8j')
 keymap.set('v', '<Leader>j', '8j')
 keymap.set('n', '<Leader>k', '8k')
 keymap.set('v', '<Leader>k', '8k')
-keymap.set('n', '<Leader>a', 'gg0vG$')
 
 -- move physical row instead of logical one
 keymap.set('n','j','gj')
@@ -56,7 +55,7 @@ vim.opt.smartindent = true
 vim.opt.breakindent = true
 vim.opt.expandtab = true
 
--- parentheses settings 
+-- parentheses settings
 keymap.set('i','(','()<Left>')
 keymap.set('i','{','{}<Left>')
 keymap.set('i','[','[]<Left>')

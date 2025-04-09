@@ -3,10 +3,13 @@ vim.g.mapleader = ' '
 
 local keymap = vim.keymap
 
--- tab
-keymap.set("n", "te", ":tabedit<Return>")
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+-- buffer
+keymap.set("n", "bd", ":bd<Return>")
+keymap.set("n", "<tab>", ":bnext<Return>", opts)
+keymap.set("n", "<s-tab>", ":bprevious<Return>", opts)
+
+-- terminal
+keymap.set("n", "<Leader>t", ":terminal<Return>")
 
 -- splitting window
 keymap.set('n', 'ss', ':split<Return><C-w>w')

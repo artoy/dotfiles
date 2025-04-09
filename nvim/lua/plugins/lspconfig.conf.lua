@@ -1,5 +1,6 @@
 local L = {
-	"nvim-lspconfig"
+	"nvim-lspconfig",
+    lazy = true,
 }
 
 function L.config()
@@ -16,11 +17,49 @@ function L.config()
     -- 変数名のリネーム
     vim.keymap.set('n', 'gn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
+    vim.diagnostic.config({
+        virtual_text = true,
+        signs = true,
+        underline = true,
+        update_in_insert = false,
+        severity_sort = true,
+    })
+
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
     require('lspconfig').typos_lsp.setup({
         init_options = {
             config = '~/.config/nvim/spell/.typos.toml',
         },
     })
+
+    require'lspconfig'.ts_ls.setup{
+        capabilities = capabilities
+    }
+
+    require("lspconfig").gopls.setup({
+        settings = {
+            gopls = {
+                completeUnimported = true,
+                usePlaceholders = true,
+                analyses = {
+                    unusedparams = true
+                }
+            }
+        },
+        capabilities = capabilities
+    })
+
+    require'lspconfig'.rust_analyzer.setup{
+      settings = {
+        ['rust-analyzer'] = {
+          diagnostics = {
+            enable = false;
+          }
+        }
+      },
+      capabilities = capabilities
+    }
 end
 
 return L

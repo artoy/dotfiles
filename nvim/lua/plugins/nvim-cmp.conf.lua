@@ -1,13 +1,14 @@
 local C = {
-	'neovim/nvim-lspconfig',
-	'hrsh7th/cmp-nvim-lsp',
-	'hrsh7th/cmp-buffer',
-	'hrsh7th/cmp-path',
-	'hrsh7th/cmp-cmdline',
-	'hrsh7th/nvim-cmp',
-	'hrsh7th/cmp-vsnip',
-	'hrsh7th/vim-vsnip',
-	"hrsh7th/nvim-cmp",
+  'hrsh7th/nvim-cmp',
+  dependencies = {
+    'neovim/nvim-lspconfig',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-vsnip',
+    'hrsh7th/vim-vsnip',
+  },
 }
 
 function C.config()
@@ -56,7 +57,7 @@ function C.config()
       { name = 'buffer' },
     })
  })
- require("cmp_git").setup() ]]-- 
+ require("cmp_git").setup() ]]--
 
   -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
   cmp.setup.cmdline({ '/', '?' }, {

@@ -4,4 +4,8 @@ local L = {
     options = { theme = 'horizon' }
 }
 
+function L.config()
+    require('lualine').setup()
+end
+
 return L

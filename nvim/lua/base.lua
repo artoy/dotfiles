@@ -62,6 +62,9 @@ keymap.set('i','[','[]<Left>')
 keymap.set('i','"','""<Left>')
 keymap.set('i',"'","''<Left>")
 
+-- clipboard settings
+vim.opt.clipboard:append({"unnamedplus"})
+
 -- another settings
 vim.opt.number = true
 vim.opt.hls = true

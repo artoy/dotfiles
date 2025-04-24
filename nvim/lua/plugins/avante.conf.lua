@@ -4,16 +4,15 @@ return {
   version = false, -- Never set this value to "*"! Never!
   opts = {
     -- add any opts here
-    provider = "openai",
+    provider = "copilot",
     auto_suggestions_provider = "copilot",
-      openai = {
-        endpoint = "https://api.openai.com/v1/",
-        api_key_name = "",
-        model = "gpt-o3-mini",
-        timeout = 30000,
-        temperature = 0,
-        max_completion_tokens = 8192,
-      }
+    openai = {
+      endpoint = "https://api.openai.com/v1/",
+      model = "o4-mini",
+      timeout = 30000,
+      temperature = 0,
+      max_completion_tokens = 8192,
+    }
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",

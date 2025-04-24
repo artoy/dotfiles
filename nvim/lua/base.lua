@@ -14,11 +14,16 @@ keymap.set("n", "<Leader>t", ":terminal<Return>")
 -- splitting window
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+
 -- moving between window
 keymap.set('n', 'sh', '<C-w>h')
 keymap.set('n', 'sk', '<C-w>k')
 keymap.set('n', 'sj', '<C-w>j')
 keymap.set('n', 'sl', '<C-w>l')
+
+-- changing position of window
+keymap.set('n', 'sr', '<C-w>r')
+keymap.set('n', 'sR', '<C-w>R')
 
 -- maps to jj to Esc
 keymap.set('i','jj','<Esc>')

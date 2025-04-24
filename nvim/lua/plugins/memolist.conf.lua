@@ -3,9 +3,9 @@ local M = {
 }
 
 function M.config()
-    vim.g.memoist_path = "~/.memolist/memo"
+    vim.g.memolist_path = "~/memo"
     vim.g.memolist_memo_suffix = "md"
-    vim.g.memolist_template_dir_path = "~/.memolist/memotemplates"
+    vim.g.memolist_template_dir_path = "~/memo/memotemplates"
     vim.keymap.set("n", "<leader>mn", ":MemoNew<CR>")
 end
 

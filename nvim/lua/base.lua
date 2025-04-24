@@ -69,3 +69,6 @@ vim.opt.clipboard:append({"unnamedplus"})
 vim.opt.number = true
 vim.opt.hls = true
 
+-- diagnostic settings
+keymap.set('n', '<Leader>d', vim.diagnostic.open_float)
+

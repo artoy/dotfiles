@@ -2,3 +2,5 @@
 .tours/
 .idea/
 .tool-versions
+
+.env

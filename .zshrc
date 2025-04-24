@@ -110,7 +110,7 @@ alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
 # peco for kubernetes
 alias -g lc='`kubectx | peco --prompt "CONTEXT>"`'
 
-PATH=~/.console-ninja/.bin:$PATH
+
 
 # neovim用のlspサーバ
 PATH=$HOME/lsp:$PATH

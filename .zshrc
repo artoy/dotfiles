@@ -22,7 +22,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # Go
-export GOPATH=$HOME/go
+export GOPATH="/home/linuxbrew/.linuxbrew/bin/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # kubernetes

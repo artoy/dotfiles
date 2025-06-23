@@ -69,7 +69,7 @@ export PATH=$HOME/git/horsat2:$PATH
 # . ~/z/z.sh
 
 # peco settings
-# 過去に実行したコマンドを選択。ctrl-rにバインド
+# Select previously executed commands. Bound to ctrl-r
 function peco-select-history() {
   BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
   CURSOR=$#BUFFER
@@ -86,7 +86,7 @@ function peco-get-destination-from-cdr() {
 }
 
 
-### 過去に移動したことのあるディレクトリを選択。ctrl-uにバインド
+### Select from previously visited directories. Bound to ctrl-u
 function peco-cdr() {
   local destination="$(peco-get-destination-from-cdr)"
   if [ -n "$destination" ]; then
@@ -100,19 +100,55 @@ zle -N peco-cdr
 bindkey '^u' peco-cdr
 
 
-# ブランチを簡単切り替え。git checkout lbで実行できる
+# Easy branch switching. Can be executed with git checkout lb
 alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
 
 
-# dockerコンテナに入る。deで実行できる
+# Enter docker container. Can be executed with de
 alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
 
 # peco for kubernetes
 alias -g lc='`kubectx | peco --prompt "CONTEXT>"`'
 
+# fzf for git fixup
+function git-fixup() {
+  FILTER=${FILTER:-fzf}
+  MAX_LOG_COUNT=${MAX_LOG_COUNT:-30}
+
+  if git diff --cached --quiet; then
+      commits="No staged changes. Use git add -p to add them."
+      ret=1
+  else
+      commits=$(git log --oneline -n "$MAX_LOG_COUNT")
+      ret=$?
+  fi
+
+  if [[ "$ret" != 0 ]]; then
+      headline=$(head -n1 <<< "$commits")
+      if [[ "$headline" = "No staged changes. Use git add -p to add them." ]]; then
+          echo "$headline" >&2
+      fi
+  else
+    line=$("$FILTER" <<< "$commits")
+    [[ "$?" = 0 && "$line" != "" ]] || exit "$?"
+
+    git commit --fixup "$(awk '{print $1}' <<< "$line")" "$@"
+  fi
+}
+
+function git-rebase-autosquash() {
+  FILTER=${FILTER:-fzf}
+  MAX_LOG_COUNT=${MAX_LOG_COUNT:-30}
+
+  commits=$(git log --oneline -n "$MAX_LOG_COUNT")
+  line=$("$FILTER" <<< "$commits")
+  [[ "$?" = 0 && "$line" != "" ]] || exit "$?"
+
+  git rebase -i --autosquash "$(awk '{print $1}' <<< "$line")" "$@"
+}
 
 
-# neovim用のlspサーバ
+# LSP server for neovim
 PATH=$HOME/lsp:$PATH
 
 # direnv
@@ -122,6 +158,8 @@ eval "$(direnv hook zsh)"
 # shortcut
 alias gb="git branch"
 alias gc="git checkout"
+alias gf="git-fixup"
+alias gr="git-rebase-autosquash"
 
 # gpg
 export GPG_TTY=$(tty)

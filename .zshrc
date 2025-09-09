@@ -1,9 +1,6 @@
 # opam configuration
 [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
-# clang to gcc
-# export PATH="/opt/homebrew/bin:$PATH"
-
 # php7.4
 export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
@@ -13,10 +10,6 @@ export PATH="$HOME/sbt/bin:$PATH"
 
 # Haskell
 export PATH="$HOME/.local/bin:$PATH"
-
-# LLVM
-# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-# [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # Go
 export GOPATH=$HOME/go
@@ -40,12 +33,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # delete useless files created by tex
 alias rmtex='sh ~/shell_script/rm_tex.sh'
 
-# python3
-# alias python="/opt/homebrew/bin/python3"
-# alias pip="/opt/homebrew/bin/pip3"
-# alias python3="/opt/homebrew/bin/python3"
-# alias pip3="/opt/homebrew/bin/pip3"
-
 # pg_config
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
@@ -66,7 +53,7 @@ export PATH=$HOME/istio-1.15.1/bin:$PATH
 export PATH=$HOME/git/horsat2:$PATH
 
 # z command
-# . ~/z/z.sh
+. ~/z/z.sh
 
 # peco settings
 # Select previously executed commands. Bound to ctrl-r
@@ -163,8 +150,4 @@ alias gr="git-rebase-autosquash"
 
 # gpg
 export GPG_TTY=$(tty)
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 

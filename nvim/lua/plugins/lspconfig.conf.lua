@@ -27,17 +27,17 @@ function L.config()
 
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-    require('lspconfig').typos_lsp.setup({
+    vim.lsp.config("typos_lsp", {
         init_options = {
             config = '~/.config/nvim/spell/.typos.toml',
         },
     })
 
-    require'lspconfig'.ts_ls.setup{
+    vim.lsp.config("ts_ls", {
         capabilities = capabilities
-    }
+    })
 
-    require("lspconfig").gopls.setup({
+    vim.lsp.config("gopls", {
         settings = {
             gopls = {
                 completeUnimported = true,
@@ -50,7 +50,7 @@ function L.config()
         capabilities = capabilities
     })
 
-    require'lspconfig'.rust_analyzer.setup{
+    vim.lsp.config("rust_analyzer", {
       settings = {
         ['rust-analyzer'] = {
           diagnostics = {
@@ -59,7 +59,11 @@ function L.config()
         }
       },
       capabilities = capabilities
-    }
+    })
+
+    vim.lsp.config("ocamllsp", {
+        capabilities = capabilities
+    })
 end
 
 return L

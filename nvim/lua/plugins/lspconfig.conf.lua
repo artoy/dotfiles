@@ -44,11 +44,14 @@ function L.config()
                 usePlaceholders = true,
                 analyses = {
                     unusedparams = true
-                }
+                },
+                staticcheck = true
             }
         },
         capabilities = capabilities
     })
+
+    vim.lsp.enable("gopls")
 
     vim.lsp.config("rust_analyzer", {
       settings = {

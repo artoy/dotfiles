@@ -151,3 +151,6 @@ alias gr="git-rebase-autosquash"
 # gpg
 export GPG_TTY=$(tty)
 
+
+# Added by Antigravity
+export PATH="/Users/artoy/.antigravity/antigravity/bin:$PATH"

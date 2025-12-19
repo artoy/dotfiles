@@ -147,6 +147,7 @@ alias gb="git branch"
 alias gc="git checkout"
 alias gf="git-fixup"
 alias gr="git-rebase-autosquash"
+alias gs="git switch"
 
 # gpg
 export GPG_TTY=$(tty)

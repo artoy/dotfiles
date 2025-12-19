@@ -23,4 +23,4 @@ vnoremap <Leader>k 8k
 nnoremap <Leader>a ggvG$
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
- 
+

@@ -53,7 +53,7 @@ export PATH=$HOME/istio-1.15.1/bin:$PATH
 export PATH=$HOME/git/horsat2:$PATH
 
 # z command
-. ~/z/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
 
 # peco settings
 # Select previously executed commands. Bound to ctrl-r
@@ -152,6 +152,5 @@ alias gs="git switch"
 # gpg
 export GPG_TTY=$(tty)
 
-
 # Added by Antigravity
-export PATH="/Users/artoy/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"

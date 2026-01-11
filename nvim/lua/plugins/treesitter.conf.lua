@@ -6,7 +6,7 @@ local T = {
 }
 
 function T.config()
-	require("nvim-treesitter.configs").setup({
+	require("nvim-treesitter.config").setup({
 		highlight = {
 			enable = true
 		},

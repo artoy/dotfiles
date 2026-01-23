@@ -20,4 +20,7 @@ ln -s $SCRIPT_DIR/starship.toml ~/.config/starship.toml
 rm ~/.ideavimrc
 ln -s $SCRIPT_DIR/.ideavimrc ~/.ideavimrc
 
+rm ~/.latexmkrc
+ln -s $SCRIPT_DIR/.latexmkrc ~/.latexmkrc
+
 source ~/.zshrc

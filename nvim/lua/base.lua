@@ -50,7 +50,12 @@ keymap.set('n','j','gj')
 keymap.set('n','k','gk')
 
 -- for escaping from terminal
-keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "term://*",
+    callback = function()
+        vim.keymap.set('t', 'jj', '<C-\\><C-n>', { buffer = true })
+    end,
+})
 
 -- indent settings
 vim.opt.tabstop = 4

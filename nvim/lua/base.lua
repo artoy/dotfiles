@@ -82,3 +82,9 @@ vim.opt.hls = true
 -- diagnostic settings
 keymap.set('n', '<Leader>d', vim.diagnostic.open_float)
 
+-- reflect external changes automatically
+vim.api.nvim_create_autocmd({ "WinEnter", "FocusGained", "BufEnter" }, {
+  pattern = "*",
+  command = "checktime",
+})
+

@@ -29,9 +29,10 @@ function L.config()
 
     vim.lsp.config("typos_lsp", {
         init_options = {
-            config = '~/.config/nvim/spell/.typos.toml',
+            config = "~/.config/nvim/spell/.typos.toml",
         },
     })
+    vim.lsp.enable("typos_lsp")
 
     vim.lsp.config("ts_ls", {
         capabilities = capabilities
@@ -50,7 +51,6 @@ function L.config()
         },
         capabilities = capabilities
     })
-
     vim.lsp.enable("gopls")
 
     vim.lsp.config("rust_analyzer", {

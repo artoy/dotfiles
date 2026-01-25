@@ -6,7 +6,7 @@ local C = {
 
 function C.config()
     require('catppuccin').setup({
-        flavour = 'frappe',
+        flavour = 'mocha', -- latte, frappe, macchiato, mocha
     })
 
     vim.cmd([[colorscheme catppuccin]])

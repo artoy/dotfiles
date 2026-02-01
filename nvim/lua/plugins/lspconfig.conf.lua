@@ -29,7 +29,7 @@ function L.config()
 
     vim.lsp.config("typos_lsp", {
         init_options = {
-            config = "~/.config/nvim/spell/.typos.toml",
+            config = vim.fn.getcwd() .. "/typos.toml",
         },
     })
     vim.lsp.enable("typos_lsp")

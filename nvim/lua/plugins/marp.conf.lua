@@ -42,7 +42,7 @@ function M.config()
     require("marp").setup {
         -- Optional configuration
         marp_command = with_theme_set(
-            "/opt/homebrew/opt/node/bin/node /opt/homebrew/bin/marp",
+            "/opt/homebrew/opt/node/bin/node /opt/homebrew/bin/marp --no-stdin",
             theme_files
         ),
         browser = nil, -- auto-detect

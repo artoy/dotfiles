@@ -67,6 +67,11 @@ function L.config()
     vim.lsp.config("ocamllsp", {
         capabilities = capabilities
     })
+
+    vim.lsp.config("clangd", {
+        capabilities = capabilities
+    })
+    vim.lsp.enable("clangd")
 end
 
 return L

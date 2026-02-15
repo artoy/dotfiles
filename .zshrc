@@ -40,12 +40,6 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 export PATH="$HOME/rbenv:$PATH"
 # eval "$(rbenv init -)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
-
 # istio
 export PATH=$HOME/istio-1.15.1/bin:$PATH
 
@@ -154,3 +148,8 @@ export GPG_TTY=$(tty)
 
 # Added by Antigravity
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# Google Cloud SDK
+GCLOUD_SDK_HOME="$HOME/google-cloud-sdk"
+if [ -f "$GCLOUD_SDK_HOME/path.zsh.inc" ]; then . "$GCLOUD_SDK_HOME/path.zsh.inc"; fi
+if [ -f "$GCLOUD_SDK_HOME/completion.zsh.inc" ]; then . "$GCLOUD_SDK_HOME/completion.zsh.inc"; fi

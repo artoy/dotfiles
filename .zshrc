@@ -153,3 +153,13 @@ export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 GCLOUD_SDK_HOME="$HOME/google-cloud-sdk"
 if [ -f "$GCLOUD_SDK_HOME/path.zsh.inc" ]; then . "$GCLOUD_SDK_HOME/path.zsh.inc"; fi
 if [ -f "$GCLOUD_SDK_HOME/completion.zsh.inc" ]; then . "$GCLOUD_SDK_HOME/completion.zsh.inc"; fi
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/artoy/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# dotnet
+export PATH="$PATH:$HOME/.dotnet/tools"
+

@@ -4,3 +4,5 @@
 .tool-versions
 
 .env
+
+**/.claude/settings.local.json

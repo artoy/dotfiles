@@ -9,6 +9,7 @@ local L = {
 
     -- a completion engine
     --    hrsh7th/nvim-cmp or Saghen/blink.cmp are popular choices
+    "hrsh7th/nvim-cmp",
 
     "nvim-telescope/telescope.nvim", -- for 2 Lean-specific pickers
     -- "andymass/vim-matchup",          -- for enhanced % motion behavior

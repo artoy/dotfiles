@@ -1,0 +1,9 @@
+# Ghostty configuration.
+# Ghostty defaults include JetBrains Mono and Nerd Font symbols.
+
+font-size = 14
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true
+macos-option-as-alt = true
+confirm-close-surface = false

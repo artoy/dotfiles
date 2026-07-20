@@ -1,26 +1,31 @@
 #!/bin/zsh
 
-SCRIPT_DIR=$(cd $(dirname $0); pwd)
+SCRIPT_DIR=$(cd "$(dirname "$0")"; pwd)
 
-rm ~/.config/git
-ln -s $SCRIPT_DIR/git ~/.config/git
+link_path() {
+  local src="$1"
+  local dest="$2"
 
-rm ~/.config/nvim
-ln -s $SCRIPT_DIR/nvim ~/.config/nvim
+  if [[ -L "$dest" || -f "$dest" ]]; then
+    rm -f "$dest" || exit 1
+  elif [[ -e "$dest" ]]; then
+    echo "error: $dest already exists and is not a symlink or regular file" >&2
+    echo "move it out of the way before running setup.sh" >&2
+    exit 1
+  fi
 
-rm ~/.vimrc
-ln -s $SCRIPT_DIR/.vimrc ~/.vimrc
+  ln -s "$src" "$dest" || exit 1
+}
 
-rm ~/.zshrc
-ln -s $SCRIPT_DIR/.zshrc ~/.zshrc
+mkdir -p "$HOME/.config"
 
-rm ~/.config/starship.toml
-ln -s $SCRIPT_DIR/starship.toml ~/.config/starship.toml
+link_path "$SCRIPT_DIR/git" "$HOME/.config/git"
+link_path "$SCRIPT_DIR/nvim" "$HOME/.config/nvim"
+link_path "$SCRIPT_DIR/ghostty" "$HOME/.config/ghostty"
+link_path "$SCRIPT_DIR/.vimrc" "$HOME/.vimrc"
+link_path "$SCRIPT_DIR/.zshrc" "$HOME/.zshrc"
+link_path "$SCRIPT_DIR/starship.toml" "$HOME/.config/starship.toml"
+link_path "$SCRIPT_DIR/.ideavimrc" "$HOME/.ideavimrc"
+link_path "$SCRIPT_DIR/.latexmkrc" "$HOME/.latexmkrc"
 
-rm ~/.ideavimrc
-ln -s $SCRIPT_DIR/.ideavimrc ~/.ideavimrc
-
-rm ~/.latexmkrc
-ln -s $SCRIPT_DIR/.latexmkrc ~/.latexmkrc
-
-source ~/.zshrc
+source "$HOME/.zshrc"

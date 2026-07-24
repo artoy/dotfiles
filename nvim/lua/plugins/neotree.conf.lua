@@ -21,6 +21,7 @@ local N = {
 function N.config()
     local keymap = vim.keymap
     keymap.set('n', 'nt', ':Neotree<Return>')
+    keymap.set('n', 'nr', ':Neotree reveal<Return>')
 end
 
 return N

@@ -1,7 +1,8 @@
 # Ghostty configuration.
-# Nerd Font symbols and box drawing come from Ghostty's built-ins.
 
-# Japanese in 游ゴシック体, everything else in the default font.
+# JetBrains Mono for the alphabet, 游ゴシック体 for Japanese.
+# Glyphs missing from JetBrains Mono come from the built-in Symbols Nerd Font.
+font-family = JetBrains Mono
 font-codepoint-map = U+3000-U+30FF,U+31F0-U+31FF,U+3200-U+32FF,U+3400-U+4DBF,U+4E00-U+9FFF,U+F900-U+FAFF,U+FE30-U+FE4F,U+FF00-U+FFEF=YuGothic
 font-size = 14
 mouse-hide-while-typing = true
